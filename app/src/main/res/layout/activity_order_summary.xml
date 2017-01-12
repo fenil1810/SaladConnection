@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFF5EE">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_order_summary"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    style="@style/AppTheme"
+    android:background="#FFF5EE"
+    tools:context="com.example.android.saladconnection.OrderSummary">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/summary"
+    style="@style/AppTheme"
+    android:text="ORDER SUMMARY"
+    android:textSize="40dp"
+    android:textAlignment="center"/>
+    <TextView
+        android:id="@+id/order1"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity   Item               Price"
+        android:textSize="30dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:layout_margin="10dp"
+        android:textSize="25dp"
+        android:text="Place Order"
+        android:onClick="placeorder"
+        style="@style/AppTheme"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:layout_margin="10dp"
+        android:textSize="25dp"
+        android:text="Clear previous Order"
+        android:onClick="clrorder1"
+        style="@style/AppTheme"
+        android:layout_alignParentEnd="true" />
+
+</LinearLayout>
+</ScrollView>

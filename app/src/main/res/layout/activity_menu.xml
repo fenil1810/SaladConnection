@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFF5EE">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#FFF5EE"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.saladconnection.MenuActivity"
+    style="@style/AppTheme">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:text="MENU"
+        android:textSize="50sp"
+        style="@style/AppTheme"/>
+    <Button
+        android:id="@+id/juice"
+        style="@style/AppTheme"
+        android:background="@drawable/button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="JUICES"
+        android:onClick="gotoJuices"
+        android:textSize="30dp" />
+    <Button
+        android:id="@+id/soup"
+        style="@style/AppTheme"
+        android:background="@drawable/button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="SOUPS"
+        android:onClick="gotoSoups"
+        android:textSize="30dp" />
+    <Button
+        android:id="@+id/salad"
+        style="@style/AppTheme"
+        android:background="@drawable/button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="SALADS"
+        android:onClick="gotoSalads"
+        android:textSize="30dp" />
+    <Button
+        android:id="@+id/feedback"
+        style="@style/AppTheme"
+        android:background="@drawable/button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="FEEDBACK"
+        android:onClick="gotoFeedback"
+        android:textSize="30dp" />
+    <Button
+        android:id="@+id/contact"
+        style="@style/AppTheme"
+        android:background="@drawable/button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="CONTACT US"
+        android:onClick="gotoContact"
+        android:textSize="30dp" />
+
+
+    </LinearLayout>
+</ScrollView>
