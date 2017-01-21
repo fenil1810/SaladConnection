@@ -56,7 +56,8 @@
         <activity android:name=".DbHelper" />
         <activity android:name=".SpinachSoup" />
         <activity android:name=".WatermelonBasildesc" />
-        <activity android:name=".GoogleLoginActivity"></activity>
+        <activity android:name=".GoogleLoginActivity" />
+        <activity android:name=".TestDB"></activity>
     </application>
 
 </manifest>
