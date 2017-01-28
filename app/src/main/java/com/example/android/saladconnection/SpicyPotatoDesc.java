@@ -91,7 +91,7 @@ public class SpicyPotatoDesc extends BaseActivity {
     }
 
     int quantity=1;
-     public void increment(View view) {
+    public void increment(View view) {
 
          String value= getIntent().getStringExtra("key3");;
          int a=Integer.parseInt(value);
@@ -165,7 +165,7 @@ public class SpicyPotatoDesc extends BaseActivity {
         int val3=Integer.parseInt(value3);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         User user1 = new User(value2,quantity,quantity*val3);
-        myRef.child("users").push().setValue(user1);
+        myRef.child("users").child(user.getUid()).push().setValue(user1);
 
         if(value2.equals("spicypotato")){
             try {
@@ -353,5 +353,4 @@ public class SpicyPotatoDesc extends BaseActivity {
             textView2.setText("₹"+value3+"/-");
         }
     }
-
 }

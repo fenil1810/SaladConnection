@@ -1,6 +1,7 @@
 package com.example.android.saladconnection;
 
-import android.app.Activity;
+import
+        android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,7 +26,27 @@ import static android.R.attr.order;
 import static android.R.attr.value;
 import static com.example.android.saladconnection.R.drawable.spinachsoup;
 
-public class SpinachSoup extends AppCompatActivity {
+public class SpinachSoup extends BaseActivity {
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference();
+    public class User {
+
+        public String username;
+        public int quan;
+        public int price;
+
+        public User() {
+            // Default constructor required for calls to DataSnapshot.getValue(User.class)
+        }
+
+        public User(String username,int quan,int price) {
+
+            this.username = username;
+            this.quan=quan;
+            this.price=price;
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,6 +112,10 @@ public class SpinachSoup extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.textView21);
         textView.setText(value);
         String value2= getIntent().getStringExtra("key2");
+        String value3= getIntent().getStringExtra("key3");
+        int val3=Integer.parseInt(value3);
+        User user1 = new User(value2,quantity,quantity*val3);
+        myRef.child("users").push().setValue(user1);
 
         if(value2.equals("spinachsoup")){
             try {

@@ -78,7 +78,7 @@ public class WatermelonBasildesc extends BaseActivity {
             Toast.makeText(this, "You cannot order more than 10 Juices", Toast.LENGTH_SHORT).show();
             return;
         }
-        String value= getIntent().getStringExtra("key3");;
+        String value= getIntent().getStringExtra("key3");
         int a=Integer.parseInt(value);
         quantity++;
         display(quantity);
@@ -112,7 +112,7 @@ public class WatermelonBasildesc extends BaseActivity {
         int val3=Integer.parseInt(value3);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         User user1 = new User(value2,quantity,quantity*val3);
-        myRef.child("users").push().setValue(user1);
+        myRef.child("users").child(user.getUid()).push().setValue(user1);
 
         if(value2.equals("watermelon")){
             try {

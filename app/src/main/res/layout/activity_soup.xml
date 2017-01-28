@@ -8,7 +8,6 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:background="#FFF5EE"
         style="@style/AppTheme"
         tools:context="com.example.android.saladconnection.SaladActivity"
         android:layout_height="match_parent">
@@ -19,51 +18,37 @@
             android:text="SOUPS"
             style="@style/AppTheme"
             android:gravity="center"/>
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button"
+            android:layout_margin="15dp"
+            android:elevation="5dp"
+            android:background="@drawable/border"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:padding="1dp"
-                android:layout_height="75dp"
-                android:src="@drawable/spinachsoup"/>
-            <TextView
-                android:id="@+id/spsoup"
-                style="@style/AppTheme"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:gravity="center"
-                android:onClick="gotospinach"
-                android:text="Spinach Soup"/>
-        </LinearLayout>
-        <LinearLayout
+                android:layout_marginTop="0dp"
+                android:layout_gravity="center"
+                android:layout_height="170dp"
+                android:src="@drawable/pomegranatejuice2"/>
+        </FrameLayout>
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:background="@drawable/button">
+            android:layout_margin="15dp"
+            android:elevation="5dp"
+            android:background="@drawable/border">
 
             <ImageView
-                android:layout_width="100dp"
-                android:padding="1dp"
-                android:layout_height="75dp"
-                android:src="@drawable/tomatosoup"/>
-            <TextView
-                style="@style/AppTheme"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:gravity="center"
-                android:text="Tomato Soup"
-                android:onClick="gototomato"/>
-        </LinearLayout>
+                android:padding="1dp"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:src="@drawable/tomatosoup"/>
+        </FrameLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

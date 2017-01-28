@@ -49,7 +49,7 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void gotoSoups(View view){
-        Intent i=new Intent(this,SoupActivity.class);
+        Intent i=new Intent(this,Soups2.class);
         startActivity(i);
     }
     public void gotoSalads(View view){
