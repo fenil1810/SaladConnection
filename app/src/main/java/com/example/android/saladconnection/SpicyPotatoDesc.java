@@ -44,7 +44,7 @@ public class SpicyPotatoDesc extends BaseActivity {
     DatabaseReference myRef = database.getReference();
     public class User {
 
-        public String username;
+        public String itemname;
         public int quan;
         public int price;
 
@@ -52,9 +52,9 @@ public class SpicyPotatoDesc extends BaseActivity {
             // Default constructor required for calls to DataSnapshot.getValue(User.class)
         }
 
-        public User(String username,int quan,int price) {
+        public User(String itemname,int quan,int price) {
 
-            this.username = username;
+            this.itemname = itemname;
             this.quan=quan;
             this.price=price;
         }

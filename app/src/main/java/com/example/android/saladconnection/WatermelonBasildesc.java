@@ -20,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 
+import static com.example.android.saladconnection.DbHelper.name;
 import static com.example.android.saladconnection.R.id.textView2;
 
 public class WatermelonBasildesc extends BaseActivity {
@@ -27,7 +28,7 @@ public class WatermelonBasildesc extends BaseActivity {
     DatabaseReference myRef = database.getReference();
     public class User {
 
-        public String username;
+        public String itemname;
         public int quan;
         public int price;
 
@@ -35,9 +36,9 @@ public class WatermelonBasildesc extends BaseActivity {
             // Default constructor required for calls to DataSnapshot.getValue(User.class)
         }
 
-        public User(String username,int quan,int price) {
+        public User(String itemname,int quan,int price) {
 
-            this.username = username;
+            this.itemname = itemname;
             this.quan=quan;
             this.price=price;
         }

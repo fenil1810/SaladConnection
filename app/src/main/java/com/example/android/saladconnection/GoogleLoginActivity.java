@@ -85,6 +85,7 @@ public class GoogleLoginActivity extends BaseActivity implements
         mDetailTextView = (TextView) findViewById(R.id.detail);
 
         // Button listeners
+
         findViewById(R.id.sign_in_button).setOnClickListener(this);
         findViewById(R.id.sign_out_button).setOnClickListener(this);
         findViewById(R.id.disconnect_button).setOnClickListener(this);
