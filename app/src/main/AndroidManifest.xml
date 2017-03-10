@@ -58,7 +58,10 @@
         <activity android:name=".WatermelonBasildesc" />
         <activity android:name=".GoogleLoginActivity" />
         <activity android:name=".TestDB" />
-        <activity android:name=".Soups2"></activity>
+        <activity android:name=".Soups2" />
+        <activity android:name=".Salad2" />
+        <activity android:name=".RetreivalActivity" />
+        <activity android:name=".Juice2"></activity>
     </application>
 
 </manifest>

@@ -41,8 +41,8 @@ public class MenuActivity extends AppCompatActivity {
         return true;
     }
     public void gotosignin(View view){
-       Intent i=new Intent(this,SignInActivity.class);
-        startActivity(i);
+        // Intent i=new Intent(this,SignInActivity.class);
+        //startActivity(i);
     }
     public void gotoJuices(View view){
         Intent i=new Intent(this,JuiceActivity.class);
@@ -53,7 +53,7 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void gotoSalads(View view){
-        Intent i=new Intent(this,SaladActivity.class);
+        Intent i=new Intent(this,Salad2.class);
         startActivity(i);
     }
     public void gotoFeedback(View view){
@@ -65,7 +65,7 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void gotoOrderSummary(View view){
-        Intent i=new Intent(this,OrderSummary.class);
+        Intent i=new Intent(this,RetreivalActivity.class);
         startActivity(i);
     }
 }

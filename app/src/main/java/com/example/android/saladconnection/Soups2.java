@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 public class Soups2 extends AppCompatActivity {
 
@@ -38,4 +39,78 @@ public class Soups2 extends AppCompatActivity {
         finish();
         return true;
     }
+    public void gotospinach(View view) {
+        String desc="A rich, smooth and creamy soup with the addition of fresh spinach.";
+        String img="R.drawable.spinachsoup";
+        Intent i=new Intent(getApplicationContext(),SpinachSoup.class);
+        i.putExtra("key1",desc);
+        i.putExtra("key2","spinachsoup");
+        i.putExtra("key3","39");
+        startActivity(i);
+    }
+    public void gototomato(View view) {
+        String desc="A deep red classic tomato soup with thin skin and sweet juicy flesh with superb flavour and aroma.";
+        Intent i=new Intent(getApplicationContext(),SpinachSoup.class);
+        i.putExtra("key1",desc);
+        i.putExtra("key2","tomatosoup");
+        i.putExtra("key3","39");
+        startActivity(i);
+    }
+    public void gotolauki(View view) {
+        String desc="A creamy delicious and extremely healthy soup with very few ingredients .";
+        Intent i=new Intent(getApplicationContext(),SpinachSoup.class);
+        i.putExtra("key1",desc);
+        i.putExtra("key2","laukisoup");
+        i.putExtra("key3","39");
+        startActivity(i);
+    }
+    public void gotobeet(View view) {
+        String desc="A gorgeous purple coloured soup prepared with fresh beet roots with garnishing of cream.";
+        Intent i=new Intent(getApplicationContext(),SpinachSoup.class);
+        i.putExtra("key1",desc);
+        i.putExtra("key2","beetsoup");
+        i.putExtra("key3","49");
+        startActivity(i);
+    }
+    public void gotocarrot(View view) {
+        String desc="A flavoursome sweet and healthy soup with fresh and  ground carrots.";
+        Intent i=new Intent(getApplicationContext(),SpinachSoup.class);
+        i.putExtra("key1",desc);
+        i.putExtra("key2","carrotsoup");
+        i.putExtra("key3","49");
+        startActivity(i);
+    }
+    public void gotocauliflower(View view) {
+        String desc="Creamy soup loaded with tender cauliflower and finished with subtle notes of garlic and spices.";
+        Intent i=new Intent(getApplicationContext(),SpinachSoup.class);
+        i.putExtra("key1",desc);
+        i.putExtra("key2","cauliflowersoup");
+        i.putExtra("key3","49");
+        startActivity(i);
+    }
+    public void gotokarela(View view) {
+        String desc="A bitter yet healthy soup with fresh bitter gourd with tinch of salt and pepper as a garnish.";
+        Intent i=new Intent(getApplicationContext(),SpinachSoup.class);
+        i.putExtra("key1",desc);
+        i.putExtra("key2","karelasoup");
+        i.putExtra("key3","49");
+        startActivity(i);
+    }
+    public void gotocabbage(View view) {
+        String desc="Finely chopped cabbage along with some mixed vegetables and garnishing of coriander.";
+        Intent i=new Intent(getApplicationContext(),SpinachSoup.class);
+        i.putExtra("key1",desc);
+        i.putExtra("key2","cabbagesoup");
+        i.putExtra("key3","49");
+        startActivity(i);
+    }
+    public void gotobroccoli(View view) {
+        String desc="Chopped Brocolli simmered with fresh cream.";
+        Intent i=new Intent(getApplicationContext(),SpinachSoup.class);
+        i.putExtra("key1",desc);
+        i.putExtra("key2","broccolisoup");
+        i.putExtra("key3","59");
+        startActivity(i);
+    }
+
 }

@@ -66,6 +66,15 @@
         android:text="CONTACT US"
         android:onClick="gotoContact"
         android:textSize="30dp" />
+    <Button
+        android:id="@+id/ordersummary"
+        style="@style/AppTheme"
+        android:background="@drawable/button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="ORDER SUMMARY"
+        android:onClick="gotoOrderSummary"
+        android:textSize="30dp" />
 
 
     </LinearLayout>
