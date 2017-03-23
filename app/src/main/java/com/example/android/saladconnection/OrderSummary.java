@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +32,6 @@ import static com.example.android.saladconnection.R.id.mobile;
 
 public class OrderSummary extends AppCompatActivity {
     static final int READ_BLOCK_SIZE = 100;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,9 +58,9 @@ public class OrderSummary extends AppCompatActivity {
 
     }
     public void placeorder(View view){
-        Toast.makeText(getBaseContext(), "Your Order has been placed ",
-                Toast.LENGTH_SHORT).show();
-
+//        Toast.makeText(getBaseContext(), "Your Order has been placed ", Toast.LENGTH_SHORT).show();
+        Intent i=new Intent(this,BarcodeActivity.class);
+        startActivity(i);
     }
 
 
