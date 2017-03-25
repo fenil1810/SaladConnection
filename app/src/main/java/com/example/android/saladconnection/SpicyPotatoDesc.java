@@ -186,7 +186,7 @@ public class SpicyPotatoDesc extends BaseActivity {
 
         if(value2.equals("spicypotato")){
             try {
-                String str="     "+quantity+"        Spicy Potato"+"       "+quantity*69+"\n";
+                String str="     "+quantity+"        Spicy Potato"+"       "+quantity*79+"\n";
                 FileOutputStream fileout=openFileOutput("mytextfile.txt", MODE_APPEND);
                 OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
                 outputWriter.write(str.toString());
