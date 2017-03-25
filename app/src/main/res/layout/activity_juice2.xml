@@ -31,7 +31,7 @@
                     android:layout_gravity="center"
                     android:layout_height="220dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/watermelonbasiljuice"
+                    android:src="@drawable/watermelonjuice"
                     android:scaleType="fitXY"/>
 
                 <TextView
@@ -56,7 +56,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="₹49/-"
+                    android:text="₹39/-"
                     android:layout_marginBottom="30dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentEnd="true" />
@@ -69,7 +69,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="A rich, smooth and creamy soup with the addition of fresh spinach."
+                    android:text="Cool and refreshing ,with juicy watermelon blended with fresh and fragrant basil."
                     android:singleLine="true"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true" />
@@ -92,7 +92,7 @@
                     android:layout_gravity="center"
                     android:layout_height="220dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/orangejuice"
+
                     android:scaleType="fitXY"/>
 
                 <TextView
@@ -104,7 +104,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
-                    android:text="Carrot Soup"
+                    android:text="Orange Flaxseed Juice"
                     android:layout_marginBottom="26dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true" />
@@ -130,7 +130,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="A flavoursome sweet and healthy soup with fresh and  ground carrots."
+                    android:text="Bright orange coloured juice with freshly cut oranges and flaxseeds."
                     android:singleLine="true"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true" />
@@ -143,7 +143,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="10dp"
-            android:onClick="gotobeet"
+            android:onClick="gotochikoo"
             card_view:cardCornerRadius="4dp">
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -153,7 +153,7 @@
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:layout_height="220dp"
-                    android:src="@drawable/beetsoup"
+                    android:src="@drawable/chikoo"
                     android:scaleType="fitXY"/>
 
                 <TextView
@@ -165,7 +165,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
-                    android:text="Beet Soup"
+                    android:text="Chikoo Juice"
                     android:layout_marginBottom="26dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true" />
@@ -191,7 +191,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="A gorgeous purple coloured soup prepared with fresh beet roots with garnishing of cream."
+                    android:text="Simple smooth and sweet milkshake with sliced chikoo in chocolate Soy milk."
                     android:singleLine="true"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true" />
@@ -203,7 +203,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="10dp"
-            android:onClick="gotocauliflower"
+            android:onClick="gotopineapple"
             card_view:cardCornerRadius="4dp">
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -213,7 +213,7 @@
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:layout_height="220dp"
-                    android:src="@drawable/cauliflowersoup"
+                    android:src="@drawable/pineapple"
                     android:scaleType="fitXY"/>
 
                 <TextView
@@ -225,7 +225,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
-                    android:text="Cauliflower Soup"
+                    android:text="Pineapple Juice"
                     android:layout_marginBottom="26dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true" />
@@ -251,68 +251,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="Creamy soup loaded with tender cauliflower and finished with subtle notes of garlic and spices."
-                    android:singleLine="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_margin="10dp"
-            android:onClick="gotocabbage"
-            card_view:cardCornerRadius="4dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_height="220dp"
-                    android:src="@drawable/cabbagesoup"
-                    android:scaleType="fitXY"/>
-
-                <TextView
-                    style="@style/AppTheme"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:gravity="center"
-                    android:paddingLeft="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:text="Cabbage Soup"
-                    android:layout_marginBottom="26dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true" />
-
-                <TextView
-                    style="@style/AppTheme"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="₹49/-"
-                    android:layout_marginBottom="30dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentEnd="true" />
-                <TextView
-                    style="@style/AppTheme"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:paddingLeft="5dp"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Finely chopped cabbage along with some mixed vegetables and garnishing of coriander."
+                    android:text="Additional hints of aniseed ,the pineapple juice packs a powerful punch with an overwhelming taste."
                     android:singleLine="true"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true" />
@@ -325,7 +264,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="10dp"
-            android:onClick="gotobroccoli"
+            android:onClick="gotoapple"
             card_view:cardCornerRadius="4dp">
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -335,19 +274,19 @@
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:layout_height="220dp"
-                    android:src="@drawable/broccolisoup"
+                    android:src="@drawable/applejuicedesc"
                     android:scaleType="fitXY"/>
 
                 <TextView
                     style="@style/AppTheme"
                     android:paddingTop="20dp"
                     android:paddingBottom="20dp"
-                    android:paddingLeft="5dp"
                     android:gravity="center"
+                    android:paddingLeft="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
-                    android:text="Broccoli Soup"
+                    android:text="Apple Juice"
                     android:layout_marginBottom="26dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true" />
@@ -360,7 +299,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="₹49/-"
+                    android:text="₹59/-"
                     android:layout_marginBottom="30dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentEnd="true" />
@@ -373,127 +312,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="Chopped Brocolli simmered with fresh cream."
-                    android:singleLine="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_margin="10dp"
-            android:onClick="gototomato"
-            card_view:cardCornerRadius="4dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_height="220dp"
-                    android:src="@drawable/tomatosoup"
-                    android:scaleType="fitXY"/>
-
-                <TextView
-                    style="@style/AppTheme"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:gravity="center"
-                    android:paddingLeft="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:text="Tomato Soup"
-                    android:layout_marginBottom="26dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true" />
-
-                <TextView
-                    style="@style/AppTheme"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="₹49/-"
-                    android:layout_marginBottom="30dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentEnd="true" />
-                <TextView
-                    style="@style/AppTheme"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:paddingLeft="5dp"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="A deep red classic tomato soup with thin skin and sweet juicy flesh with superb flavour and aroma."
-                    android:singleLine="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_margin="10dp"
-            android:onClick="gotolauki"
-            card_view:cardCornerRadius="4dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_height="220dp"
-                    android:src="@drawable/laukisoup"
-                    android:scaleType="fitXY"/>
-
-                <TextView
-                    style="@style/AppTheme"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:gravity="center"
-                    android:paddingLeft="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:text="Lauki Soup"
-                    android:layout_marginBottom="26dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true" />
-
-                <TextView
-                    style="@style/AppTheme"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="₹49/-"
-                    android:layout_marginBottom="30dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentEnd="true" />
-                <TextView
-                    style="@style/AppTheme"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:paddingLeft="5dp"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="A creamy delicious and extremely healthy soup with very few ingredients."
+                    android:text="A grounding ,sweet and savory,light energizing green juice with cumin seeds."
                     android:singleLine="true"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true" />
@@ -506,7 +325,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="10dp"
-            android:onClick="gotokarela"
+            android:onClick="gotopomegranate"
             card_view:cardCornerRadius="4dp">
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -516,7 +335,7 @@
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:layout_height="220dp"
-                    android:src="@drawable/karelasoup"
+                    android:src="@drawable/pomegranatejuice2"
                     android:scaleType="fitXY"/>
 
                 <TextView
@@ -528,7 +347,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
-                    android:text="Karela Soup"
+                    android:text="Pomegranate Juice"
                     android:layout_marginBottom="26dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true" />
@@ -541,7 +360,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="₹49/-"
+                    android:text="₹59/-"
                     android:layout_marginBottom="30dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentEnd="true" />
@@ -554,11 +373,72 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="A bitter yet healthy soup with fresh bitter gourd with tinch of salt and pepper as a garnish."
+                    android:text="Exotic Pomegranate juice flavoured with dark chocolate."
                     android:singleLine="true"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:onClick="gotokiwi"
+            card_view:cardCornerRadius="4dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="220dp"
+                    android:src="@drawable/kiwijuice"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    style="@style/AppTheme"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:text="Kiwi Juice"
+                    android:layout_marginBottom="26dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    style="@style/AppTheme"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="₹69/-"
+                    android:layout_marginBottom="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true" />
+                <TextView
+                    style="@style/AppTheme"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Freshly chopped kiwi with cardamom for extra flavour and kick provides a refreshing taste."
+                    android:singleLine="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
     </LinearLayout>
 </ScrollView>

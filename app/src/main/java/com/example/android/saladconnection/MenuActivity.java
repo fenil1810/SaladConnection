@@ -57,7 +57,7 @@ public class MenuActivity extends AppCompatActivity {
         //startActivity(i);
     }
     public void gotoJuices(View view){
-        Intent i=new Intent(this,JuiceActivity.class);
+        Intent i=new Intent(this,Juice2.class);
         startActivity(i);
     }
     public void gotoSoups(View view){

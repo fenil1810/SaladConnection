@@ -150,7 +150,7 @@ public class SpinachSoup extends BaseActivity {
         }
         else if(value2.equals("tomatosoup")){
             try{
-                String str="     "+quantity+"        Tomato Soup"+"      "+quantity*49+"\n";
+                String str="     "+quantity+"        Tomato Soup"+"      "+quantity*39+"\n";
                 FileOutputStream fileout=openFileOutput("mytextfile.txt", MODE_APPEND);
                 OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
                 outputWriter.write(str.toString());
@@ -167,7 +167,7 @@ public class SpinachSoup extends BaseActivity {
         }
         else if(value2.equals("laukisoup")){
             try {
-                String str="     "+quantity+"        Lauki Soup"+"       "+quantity*49+"\n";
+                String str="     "+quantity+"        Lauki Soup"+"       "+quantity*39+"\n";
                 FileOutputStream fileout=openFileOutput("mytextfile.txt", MODE_APPEND);
                 OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
                 outputWriter.write(str.toString());
@@ -198,7 +198,7 @@ public class SpinachSoup extends BaseActivity {
         }
         else if(value2.equals("carrotsoup")){
             try {
-                String str="     "+quantity+"        Carrot Soup"+"      "+quantity*59+"\n";
+                String str="     "+quantity+"        Carrot Soup"+"      "+quantity*49+"\n";
                 FileOutputStream fileout=openFileOutput("mytextfile.txt", MODE_APPEND);
                 OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
                 outputWriter.write(str.toString());
@@ -214,7 +214,7 @@ public class SpinachSoup extends BaseActivity {
         }
         else if(value2.equals("cauliflowersoup")){
             try {
-                String str="     "+quantity+"        Cauliflower"+"       "+quantity*59+"\n";
+                String str="     "+quantity+"        Cauliflower"+"       "+quantity*49+"\n";
                 FileOutputStream fileout=openFileOutput("mytextfile.txt", MODE_APPEND);
                 OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
                 outputWriter.write(str.toString());
@@ -230,7 +230,7 @@ public class SpinachSoup extends BaseActivity {
         }
         else if(value2.equals("karelasoup")){
             try {
-                String str="     "+quantity+"        Karela Soup"+"      "+quantity*69+"\n";
+                String str="     "+quantity+"        Karela Soup"+"      "+quantity*49+"\n";
                 FileOutputStream fileout=openFileOutput("mytextfile.txt", MODE_APPEND);
                 OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
                 outputWriter.write(str.toString());
@@ -246,7 +246,7 @@ public class SpinachSoup extends BaseActivity {
         }
         else if(value2.equals("cabbagesoup")){
             try {
-                String str="     "+quantity+"        Cabbage Soup"+"    "+quantity*69+"\n";
+                String str="     "+quantity+"        Cabbage Soup"+"    "+quantity*49+"\n";
                 FileOutputStream fileout=openFileOutput("mytextfile.txt", MODE_APPEND);
                 OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
                 outputWriter.write(str.toString());
@@ -262,7 +262,7 @@ public class SpinachSoup extends BaseActivity {
         }
         else if(value2.equals("broccolisoup")){
             try {
-                String str="     "+quantity+"        Brocolli Soup"+"    "+quantity*69+"\n";
+                String str="     "+quantity+"        Brocolli Soup"+"    "+quantity*59+"\n";
                 FileOutputStream fileout=openFileOutput("mytextfile.txt", MODE_APPEND);
                 OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
                 outputWriter.write(str.toString());
@@ -293,8 +293,7 @@ public class SpinachSoup extends BaseActivity {
             ImageView image=(ImageView) findViewById(R.id.image1);
             image.setImageResource(R.drawable.spinachsoup);
             textView2.setText("₹"+value3+"/-");
-        }
-        else if(value2.equals("tomatosoup")){
+        } else if(value2.equals("tomatosoup")){
             ImageView image=(ImageView) findViewById(R.id.image1);
             image.setImageResource(R.drawable.tomatosoup);
             textView2.setText("₹"+value3+"/-");

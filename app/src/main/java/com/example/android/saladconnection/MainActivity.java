@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        OrderSummary.abc=new OrderSummary();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
@@ -36,6 +37,5 @@ public class MainActivity extends AppCompatActivity {
     public void click1(View view){
         Intent i=new Intent(this,GoogleLoginActivity.class);
         startActivity(i);
-        OrderSummary.abc=new OrderSummary();
     }
 }
