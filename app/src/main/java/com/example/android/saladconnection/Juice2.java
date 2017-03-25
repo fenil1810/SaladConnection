@@ -32,10 +32,21 @@ public class Juice2 extends AppCompatActivity {
                 startActivity(i);
                 return true;
             }
+
+            case R.id.action_sign_out:{
+                GoogleLoginActivity googleLoginActivity=new GoogleLoginActivity();
+                googleLoginActivity.signOut();
+                googleLoginActivity.updateUI(null);
+                Intent i=new Intent(this,GoogleLoginActivity.class);
+                startActivity(i);
+            }
+            case R.id.action_feedback:{
+                Intent i=new Intent(this,FeedbackActivity.class);
+                startActivity(i);
+            }
         }
         return true;
     }
-
     @Override
     public boolean onSupportNavigateUp(){
         finish();

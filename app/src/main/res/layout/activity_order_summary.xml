@@ -21,6 +21,7 @@
     android:text="ORDER SUMMARY"
     android:textSize="40dp"
     android:textAlignment="center"/>
+
     <TextView
         android:id="@+id/order1"
         style="@style/AppTheme"
@@ -29,6 +30,12 @@
         android:text="Quantity   Item               Price"
         android:textSize="30dp"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sumtext"
+        style="@style/AppTheme"
+        android:textSize="30dp"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

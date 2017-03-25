@@ -36,6 +36,7 @@ import static android.R.attr.data;
 import static android.R.attr.y;
 import static android.os.Build.VERSION_CODES.N;
 import static android.provider.Telephony.Mms.Part.FILENAME;
+import static com.example.android.saladconnection.OrderSummary.abc;
 import static com.example.android.saladconnection.R.id.feedback;
 import static com.example.android.saladconnection.R.id.price_textview;
 
@@ -53,7 +54,6 @@ public class SpicyPotatoDesc extends BaseActivity {
         }
 
         public User(String itemname,int quan,int price) {
-
             this.itemname = itemname;
             this.quan=quan;
             this.price=price;
@@ -77,6 +77,7 @@ public class SpicyPotatoDesc extends BaseActivity {
          return true;
      }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
@@ -86,10 +87,21 @@ public class SpicyPotatoDesc extends BaseActivity {
                 startActivity(i);
                 return true;
             }
+
+            case R.id.action_sign_out:{
+                GoogleLoginActivity googleLoginActivity=new GoogleLoginActivity();
+                googleLoginActivity.signOut();
+                googleLoginActivity.updateUI(null);
+                Intent i=new Intent(this,GoogleLoginActivity.class);
+                startActivity(i);
+            }
+            case R.id.action_feedback:{
+                Intent i=new Intent(this,FeedbackActivity.class);
+                startActivity(i);
+            }
         }
         return true;
     }
-
     int quantity=1;
     public void increment(View view) {
 
@@ -163,6 +175,11 @@ public class SpicyPotatoDesc extends BaseActivity {
         String value2= getIntent().getStringExtra("key2");
         String value3= getIntent().getStringExtra("key3");
         int val3=Integer.parseInt(value3);
+        //OrderSummary os=new OrderSummary();
+        OrderSummary.abc.additem(quantity*val3);
+        //os.sum+=quantity*val3;
+        Toast.makeText(this, "Sum="+OrderSummary.abc.sum, Toast.LENGTH_SHORT).show();
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         User user1 = new User(value2,quantity,quantity*val3);
         myRef.child("users").child(user.getUid()).push().setValue(user1);

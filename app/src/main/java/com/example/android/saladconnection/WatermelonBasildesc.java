@@ -56,6 +56,7 @@ public class WatermelonBasildesc extends BaseActivity {
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
@@ -65,10 +66,21 @@ public class WatermelonBasildesc extends BaseActivity {
                 startActivity(i);
                 return true;
             }
+
+            case R.id.action_sign_out:{
+                GoogleLoginActivity googleLoginActivity=new GoogleLoginActivity();
+                googleLoginActivity.signOut();
+                googleLoginActivity.updateUI(null);
+                Intent i=new Intent(this,GoogleLoginActivity.class);
+                startActivity(i);
+            }
+            case R.id.action_feedback:{
+                Intent i=new Intent(this,FeedbackActivity.class);
+                startActivity(i);
+            }
         }
         return true;
     }
-
     public void cart(View view){
         Intent i=new Intent(this,OrderSummary.class);
         startActivity(i);
@@ -111,6 +123,9 @@ public class WatermelonBasildesc extends BaseActivity {
         String value2= getIntent().getStringExtra("key2");
         String value3= getIntent().getStringExtra("key3");
         int val3=Integer.parseInt(value3);
+        OrderSummary.abc.additem(quantity*val3);
+        Toast.makeText(this, "Sum="+OrderSummary.abc.sum, Toast.LENGTH_SHORT).show();
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         User user1 = new User(value2,quantity,quantity*val3);
         myRef.child("users").child(user.getUid()).push().setValue(user1);

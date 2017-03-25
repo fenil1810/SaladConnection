@@ -27,6 +27,7 @@ public class FeedbackActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_icons, menu);
             return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
@@ -35,6 +36,18 @@ public class FeedbackActivity extends AppCompatActivity {
                 Intent i = new Intent(this, OrderSummary.class);
                 startActivity(i);
                 return true;
+            }
+
+            case R.id.action_sign_out:{
+                GoogleLoginActivity googleLoginActivity=new GoogleLoginActivity();
+                googleLoginActivity.signOut();
+                googleLoginActivity.updateUI(null);
+                Intent i=new Intent(this,GoogleLoginActivity.class);
+                startActivity(i);
+            }
+            case R.id.action_feedback:{
+                Intent i=new Intent(this,FeedbackActivity.class);
+                startActivity(i);
             }
         }
         return true;

@@ -29,9 +29,12 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 import static com.example.android.saladconnection.R.id.emailid;
 import static com.example.android.saladconnection.R.id.feedback;
 import static com.example.android.saladconnection.R.id.mobile;
+import static com.example.android.saladconnection.R.id.sumtext;
 
 public class OrderSummary extends AppCompatActivity {
     static final int READ_BLOCK_SIZE = 100;
+    static OrderSummary abc;
+    int sum;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +43,7 @@ public class OrderSummary extends AppCompatActivity {
     }
 
     public void clrorder1(View view){
+        OrderSummary.abc.sum=0;
         try {
             String str="";
             FileOutputStream fileout=openFileOutput("mytextfile.txt", MODE_PRIVATE);
@@ -58,11 +62,13 @@ public class OrderSummary extends AppCompatActivity {
 
     }
     public void placeorder(View view){
-//        Toast.makeText(getBaseContext(), "Your Order has been placed ", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getBaseContext(), "Your Order has been placed ", Toast.LENGTH_SHORT).show();
         Intent i=new Intent(this,BarcodeActivity.class);
         startActivity(i);
     }
-
+    public void additem(int price){
+        sum+=price;
+    }
 
     public void display() {
        /* try {
@@ -94,9 +100,14 @@ public class OrderSummary extends AppCompatActivity {
                 String readstring=String.copyValueOf(inputBuffer,0,charRead);
                 s +=readstring;
             }
-            InputRead.close();
+ //           Toast.makeText(getBaseContext(), s,Toast.LENGTH_SHORT).show();
             TextView OS = (TextView) findViewById(R.id.order1);
             OS.setText(s);
+            TextView T = (TextView) findViewById(R.id.sumtext);
+            Toast.makeText(getBaseContext(), sum,Toast.LENGTH_SHORT).show();
+            String sum2=Integer.toString(sum);
+            T.setText(sum2);
+            InputRead.close();
 
         } catch (Exception e) {
             e.printStackTrace();

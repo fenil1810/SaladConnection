@@ -24,6 +24,7 @@ import java.io.OutputStreamWriter;
 
 import static android.R.attr.order;
 import static android.R.attr.value;
+import static com.example.android.saladconnection.DbHelper.name;
 import static com.example.android.saladconnection.R.drawable.spinachsoup;
 
 public class SpinachSoup extends BaseActivity {
@@ -31,7 +32,7 @@ public class SpinachSoup extends BaseActivity {
     DatabaseReference myRef = database.getReference();
     public class User {
 
-        public String username;
+        public String itemname;
         public int quan;
         public int price;
 
@@ -39,9 +40,9 @@ public class SpinachSoup extends BaseActivity {
             // Default constructor required for calls to DataSnapshot.getValue(User.class)
         }
 
-        public User(String username,int quan,int price) {
+        public User(String itemname,int quan,int price) {
 
-            this.username = username;
+            this.itemname = itemname;
             this.quan=quan;
             this.price=price;
         }
@@ -59,6 +60,7 @@ public class SpinachSoup extends BaseActivity {
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
@@ -68,10 +70,21 @@ public class SpinachSoup extends BaseActivity {
                 startActivity(i);
                 return true;
             }
+
+            case R.id.action_sign_out:{
+                GoogleLoginActivity googleLoginActivity=new GoogleLoginActivity();
+                googleLoginActivity.signOut();
+                googleLoginActivity.updateUI(null);
+                Intent i=new Intent(this,GoogleLoginActivity.class);
+                startActivity(i);
+            }
+            case R.id.action_feedback:{
+                Intent i=new Intent(this,FeedbackActivity.class);
+                startActivity(i);
+            }
         }
         return true;
     }
-
     public void cart(View view){
         Intent i=new Intent(this,OrderSummary.class);
         startActivity(i);
@@ -114,6 +127,8 @@ public class SpinachSoup extends BaseActivity {
         String value2= getIntent().getStringExtra("key2");
         String value3= getIntent().getStringExtra("key3");
         int val3=Integer.parseInt(value3);
+        OrderSummary.abc.additem(quantity*val3);
+        Toast.makeText(this, "Sum="+OrderSummary.abc.sum, Toast.LENGTH_SHORT).show();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         User user1 = new User(value2,quantity,quantity*val3);
         myRef.child("users").child(user.getUid()).push().setValue(user1);
