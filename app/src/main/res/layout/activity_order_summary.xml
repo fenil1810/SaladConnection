@@ -34,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sumtext"
+        android:text=" "
         style="@style/AppTheme"
         android:textSize="30dp"/>
     <Button

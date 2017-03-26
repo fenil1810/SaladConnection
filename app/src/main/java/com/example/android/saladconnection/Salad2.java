@@ -59,8 +59,7 @@ public class Salad2 extends AppCompatActivity {
         i.putExtra("key3","79");
         startActivity(i);
     }
-    public void gotoBRDesc(View view)
-    {
+    public void gotoBRDesc(View view) {
         String desc="Brown Rice with Broccoli and French Beans with garnishing of Spring Onions.";
         Intent i=new Intent(getApplicationContext(),SpicyPotatoDesc.class);
         i.putExtra("key1",desc);

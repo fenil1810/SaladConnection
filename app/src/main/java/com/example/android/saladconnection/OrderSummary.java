@@ -40,6 +40,7 @@ public class OrderSummary extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_summary);
         display();
+
     }
 
     public void clrorder1(View view){
@@ -104,9 +105,9 @@ public class OrderSummary extends AppCompatActivity {
             TextView OS = (TextView) findViewById(R.id.order1);
             OS.setText(s);
             TextView T = (TextView) findViewById(R.id.sumtext);
-            Toast.makeText(getBaseContext(), sum,Toast.LENGTH_SHORT).show();
-            String sum2=Integer.toString(sum);
-            T.setText(sum2);
+ //           Toast.makeText(getBaseContext(), OrderSummary.abc.getsum(),Toast.LENGTH_SHORT).show();
+//            String sum2=Integer.toString(OrderSummary.abc.sum);
+            T.setText("Total="+OrderSummary.abc.sum);
             InputRead.close();
 
         } catch (Exception e) {
