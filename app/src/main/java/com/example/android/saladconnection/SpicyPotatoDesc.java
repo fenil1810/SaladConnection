@@ -31,6 +31,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.text.NumberFormat;
+import java.util.Date;
 
 import static android.R.attr.data;
 import static android.R.attr.y;
@@ -169,6 +170,8 @@ public class SpicyPotatoDesc extends BaseActivity {
         textView.setText(value);
         String value2= getIntent().getStringExtra("key2");
         */
+        Date dt=new Date();
+        String date=Integer.toString(dt.getDate())+Integer.toString(dt.getMonth());
         String value= getIntent().getStringExtra("key1");
         TextView textView = (TextView) findViewById(R.id.textView2);
         textView.setText(value);
@@ -182,7 +185,7 @@ public class SpicyPotatoDesc extends BaseActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         User user1 = new User(value2,quantity,quantity*val3);
-        myRef.child("users").child(user.getUid()).push().setValue(user1);
+        myRef.child("users").child(user.getUid()).child(date).push().setValue(user1);
 
         if(value2.equals("spicypotato")){
             try {
@@ -247,7 +250,7 @@ public class SpicyPotatoDesc extends BaseActivity {
         }
         else if(value2.equals("soya")){
             try {
-                String str="     "+quantity+"        Soya Chunks"+"    "+quantity*69+"\n";
+                String str="     "+quantity+"        Soya Chunks"+"     "+quantity*69+"\n";
                 FileOutputStream fileout=openFileOutput("mytextfile.txt", MODE_APPEND);
                 OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
                 outputWriter.write(str.toString());

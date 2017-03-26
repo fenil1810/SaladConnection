@@ -16,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.EventListener;
 import java.util.List;
 
@@ -26,11 +27,13 @@ public class RetreivalActivity extends AppCompatActivity {
     //private Firebase mRef;
     //private ArrayList<String> mOrder;
 
+    Date dt=new Date();
+    String date=Integer.toString(dt.getDate())+Integer.toString(dt.getMonth());
     ListView listViewOrders;
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference mRef= database.getReference().child("users").child(user.getUid());
+    DatabaseReference mRef= database.getReference().child("users").child(user.getUid()).child(date);
     List<Order> orderList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

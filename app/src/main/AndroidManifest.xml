@@ -56,13 +56,16 @@
         <activity android:name=".DbHelper" />
         <activity android:name=".SpinachSoup" />
         <activity android:name=".WatermelonBasildesc" />
-        <activity android:name=".GoogleLoginActivity" />
+        <activity
+            android:name=".GoogleLoginActivity">
+        </activity>
         <activity android:name=".TestDB" />
         <activity android:name=".Soups2" />
         <activity android:name=".Salad2" />
         <activity android:name=".RetreivalActivity" />
         <activity android:name=".Juice2" />
         <activity android:name=".BarcodeActivity"></activity>
+
     </application>
 
 </manifest>

@@ -19,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
+import java.util.Date;
 
 import static com.example.android.saladconnection.DbHelper.name;
 import static com.example.android.saladconnection.R.id.textView2;
@@ -117,6 +118,8 @@ public class WatermelonBasildesc extends BaseActivity {
         priceTextView.setText("₹"+number+"/-");
     }
     public void orderW(View view){
+        Date dt=new Date();
+        String date=Integer.toString(dt.getDate())+Integer.toString(dt.getMonth());
         String value= getIntent().getStringExtra("key1");
         TextView textView = (TextView) findViewById(textView2);
         textView.setText(value);
@@ -128,7 +131,7 @@ public class WatermelonBasildesc extends BaseActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         User user1 = new User(value2,quantity,quantity*val3);
-        myRef.child("users").child(user.getUid()).push().setValue(user1);
+        myRef.child("users").child(user.getUid()).child(date).push().setValue(user1);
 
         if(value2.equals("watermelon")){
             try {
@@ -211,7 +214,7 @@ public class WatermelonBasildesc extends BaseActivity {
         }
         else if(value2.equals("pomegranate")){
             try {
-                String str="     "+quantity+"        Pomegranate"+"          "+quantity*59+"\n";
+                String str="     "+quantity+"        Pomegranate"+"       "+quantity*59+"\n";
                 FileOutputStream fileout=openFileOutput("mytextfile.txt", MODE_APPEND);
                 OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
                 outputWriter.write(str.toString());

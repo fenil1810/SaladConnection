@@ -2,11 +2,15 @@ package com.example.android.saladconnection;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -53,6 +57,21 @@ import com.google.firebase.auth.GoogleAuthProvider;
         import com.google.firebase.auth.FirebaseUser;
         import com.google.firebase.auth.GoogleAuthProvider;
 
+import java.io.IOException;
+import java.net.URL;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.OptionalPendingResult;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 /**
  * Demonstrate Firebase Authentication using a Google ID Token.
  */
@@ -74,15 +93,25 @@ public class GoogleLoginActivity extends BaseActivity implements
     private GoogleApiClient mGoogleApiClient;
     private TextView mStatusTextView;
     private TextView mDetailTextView;
+    private TextView mFamilynameTextView;
+    private TextView mGivennameTextView;
+    private TextView mNameTextView;
+    private ImageView mProfilePhoto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google_login);
 
+
+
+
         // Views
         mStatusTextView = (TextView) findViewById(R.id.status);
         mDetailTextView = (TextView) findViewById(R.id.detail);
+        mNameTextView = (TextView) findViewById(R.id.dispname);
+        mProfilePhoto=(ImageView)findViewById(R.id.google_icon);
+
 
         // Button listeners
 
@@ -155,8 +184,14 @@ public class GoogleLoginActivity extends BaseActivity implements
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             if (result.isSuccess()) {
                 // Google Sign In was successful, authenticate with Firebase
-                GoogleSignInAccount account = result.getSignInAccount();
-                firebaseAuthWithGoogle(account);
+                GoogleSignInAccount acct = result.getSignInAccount();
+                String personName = acct.getDisplayName();
+                String personGivenName = acct.getGivenName();
+                String personFamilyName = acct.getFamilyName();
+                String personEmail = acct.getEmail();
+                String personId = acct.getId();
+                Uri personPhoto = acct.getPhotoUrl();
+                firebaseAuthWithGoogle(acct);
                 Intent i=new Intent(this,MenuActivity.class);
                 startActivity(i);
             } else {
@@ -239,13 +274,28 @@ public class GoogleLoginActivity extends BaseActivity implements
         if (user != null) {
             mStatusTextView.setText(getString(R.string.google_status_fmt, user.getEmail()));
             mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
+            mNameTextView.setText(getString(R.string.google_status_fmt, user.getDisplayName()));
+            String Photo_URL=getString(R.string.google_status_fmt, user.getPhotoUrl());
+            //mProfilePhoto.setImageURI(Photo_URL);
+            Glide.with(getApplicationContext()).load(Photo_URL.toString())
+                    .thumbnail(0.5f)
+                    .crossFade()
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .into(mProfilePhoto);
 
+ /*           try{
+                URL url = new URL(Photo_URL.toString());
+            Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+            mProfilePhoto.setImageBitmap(bmp);
+            } catch (IOException io){
+                Toast.makeText(getBaseContext(),"Error in pic retreival",Toast.LENGTH_SHORT).show();
+            }*/
             findViewById(R.id.sign_in_button).setVisibility(View.GONE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE);
         } else {
             mStatusTextView.setText(R.string.signed_out);
             mDetailTextView.setText(null);
-
+            mNameTextView.setText(null);
             findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE);
         }

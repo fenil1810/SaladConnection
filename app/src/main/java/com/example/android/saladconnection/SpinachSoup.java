@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
+import java.util.Date;
 
 import static android.R.attr.order;
 import static android.R.attr.value;
@@ -121,6 +122,8 @@ public class SpinachSoup extends BaseActivity {
         priceTextView.setText("₹"+number+"/-");
     }
     public void ordersoup(View view){
+        Date dt=new Date();
+        String date=Integer.toString(dt.getDate())+Integer.toString(dt.getMonth());
         String value= getIntent().getStringExtra("key1");
         TextView textView = (TextView) findViewById(R.id.textView21);
         textView.setText(value);
@@ -131,7 +134,7 @@ public class SpinachSoup extends BaseActivity {
         Toast.makeText(this, "Sum="+OrderSummary.abc.sum, Toast.LENGTH_SHORT).show();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         User user1 = new User(value2,quantity,quantity*val3);
-        myRef.child("users").child(user.getUid()).push().setValue(user1);
+        myRef.child("users").child(user.getUid()).child(date).push().setValue(user1);
 
         if(value2.equals("spinachsoup")){
             try {
