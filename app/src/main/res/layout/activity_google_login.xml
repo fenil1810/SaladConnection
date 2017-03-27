@@ -6,7 +6,8 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="@color/grey_100"
 android:orientation="vertical"
-android:onClick="gotomenu"
+android:paddingTop="100dp"
+    android:onClick="gotomenu"
     android:weightSum="4"
     tools:context="com.example.android.saladconnection.GoogleLoginActivity">
 
@@ -20,7 +21,7 @@ android:onClick="gotomenu"
     <ImageView
         android:id="@+id/google_icon"
         android:contentDescription="@string/desc_firebase_lockup"
-        android:src="@drawable/firebase_lockup_400"
+        android:src="@drawable/googleg_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

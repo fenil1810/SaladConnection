@@ -277,12 +277,12 @@ public class GoogleLoginActivity extends BaseActivity implements
             mNameTextView.setText(getString(R.string.google_status_fmt, user.getDisplayName()));
             String Photo_URL=getString(R.string.google_status_fmt, user.getPhotoUrl());
             //mProfilePhoto.setImageURI(Photo_URL);
-            Glide.with(getApplicationContext()).load(Photo_URL.toString())
+/*            Glide.with(getApplicationContext()).load(Photo_URL.toString())
                     .thumbnail(0.5f)
                     .crossFade()
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .into(mProfilePhoto);
-
+*/
  /*           try{
                 URL url = new URL(Photo_URL.toString());
             Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());

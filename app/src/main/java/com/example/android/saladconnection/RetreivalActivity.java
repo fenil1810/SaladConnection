@@ -79,6 +79,7 @@ public class RetreivalActivity extends AppCompatActivity {
                 for (DataSnapshot orderSnapshot : dataSnapshot.getChildren()) {
                     Order order=orderSnapshot.getValue(Order.class);
                     orderList.add(order);
+
                 }
                 OrderList adapter=new OrderList(RetreivalActivity.this,orderList);
                 listViewOrders.setAdapter(adapter);
